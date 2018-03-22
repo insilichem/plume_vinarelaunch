@@ -20,9 +20,9 @@ def read(*filenames, **kwargs):
 long_description = read('README.md')
 
 setup(
-    name='plume_vinarelaunch',
+    name='tangram_vinarelaunch',
     version='0.0.1',
-    url='https://github.com/insilichem/plume_vinarelaunch',
+    url='https://github.com/insilichem/tangram_vinarelaunch',
     author='Jaime Rodríguez-Guerra',
     author_email='jaime.rogue@gmail.com',
     description=long_description,

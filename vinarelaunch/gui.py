@@ -10,7 +10,7 @@ import Tkinter as tk
 import Pmw
 import chimera
 from chimera.widgets import MoleculeOptionMenu
-from libplume.ui import PlumeBaseDialog
+from libtangram.ui import TangramBaseDialog
 from core import Controller
 
 def showUI(*args, **kwargs):
@@ -21,7 +21,7 @@ def showUI(*args, **kwargs):
     ui.enter()
 
 
-class VinaRelaunchDialog(PlumeBaseDialog):
+class VinaRelaunchDialog(TangramBaseDialog):
 
     buttons = ('OK', 'Close')
     statusResizing = False
