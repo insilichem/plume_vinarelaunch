@@ -1,0 +1,40 @@
+{% set name = "tangram_vinarelaunch" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ environ.get('GIT_DESCRIBE_TAG', 'v')[1:] }}
+
+source:
+  url: ../
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - python
+  run:
+    - python
+    - pychimera     >=0.2.6
+    - libtangram
+
+about:
+  home: http://github.com/insilichem/tangram_vinarelaunch
+  license: MIT
+  license_family: MIT
+
+  summary: 'Easily relaunch failed AutoDock Vina OPAL jobs from UCSF Chimera'
+
+  description: |
+    UCSF Chimera has an extension to submit AutoDock calculations to OPAL
+    web services (and locally). However, sometimes the input file is not
+    correctly built and it results in an error that the user must resolve
+    manually. Then, the GUI has to be configured all over again. This simple
+    GUI allows to submit the files directly, without more configuration that
+    the .conf file already carries.
+  doc_url: http://tangram-suite.readthedocs.io/en/latest/tangram_vinarelaunch.html
+  dev_url: https://github.com/insilichem/tangram_vinarelaunch
+
+
